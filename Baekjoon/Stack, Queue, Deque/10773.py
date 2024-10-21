@@ -12,9 +12,10 @@ for i in range(K):
     num = int(input())
     
     if num == 0: # 만일 0을 입력받으면
-        stack.pop() # 가장 최근에 쓴 수를 지운다.
-    
-    stack.append(num)
+        if stack:
+            stack.pop() # 가장 최근에 쓴 수를 지운다.
+    else:
+        stack.append(num)
     
    
 
